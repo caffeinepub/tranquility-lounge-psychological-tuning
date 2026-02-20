@@ -1,0 +1,96 @@
+{
+  "kind": "build_request",
+  "title": "Remove reminder time configuration from onboarding and plan settings",
+  "projectName": "Tranquility Lounge",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-21",
+      "text": "Remove the time windows selection step (step 4) from the onboarding flow, updating the step indicator to show 4 steps instead of 5 and adjusting step navigation accordingly",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-delete-reminders"
+        ],
+        "quotes": [
+          "Delete the reminders times"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Onboarding flow progresses directly from Preferred Tools step to Reset Plan step",
+        "Step indicator displays 4 steps total instead of 5",
+        "Step numbering remains sequential (1: Goal Focus, 2: Escalation Patterns, 3: Preferred Tools, 4: Reset Plan)",
+        "TimeWindowsStep component is no longer rendered in the onboarding flow"
+      ]
+    },
+    {
+      "id": "REQ-22",
+      "text": "Remove time window data fields from the onboarding state management hook, eliminating storage and submission of morning/midday/evening time preferences",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-delete-reminders"
+        ],
+        "quotes": [
+          "Delete the reminders times"
+        ]
+      },
+      "acceptanceCriteria": [
+        "useOnboarding hook no longer tracks timeWindows state",
+        "Onboarding completion does not send time window data to backend",
+        "State object only contains goalFocus, escalationPatterns, preferredTools, and resetPlanSteps"
+      ]
+    },
+    {
+      "id": "REQ-23",
+      "text": "Remove the RemindersConfig component from the Plan page, eliminating the reminders configuration card entirely",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-delete-reminders"
+        ],
+        "quotes": [
+          "Delete the reminders times"
+        ]
+      },
+      "acceptanceCriteria": [
+        "RemindersConfig component is not rendered on the Plan page",
+        "Plan page displays only Reset Sequence, Tool Preferences, and Daily Routines sections",
+        "No UI elements related to reminder time configuration remain visible"
+      ]
+    },
+    {
+      "id": "REQ-24",
+      "text": "Remove timeWindows fields from the backend UserProfile type and eliminate all storage, retrieval, and update logic for reminder time preferences",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-user-delete-reminders"
+        ],
+        "quotes": [
+          "Delete the reminders times"
+        ]
+      },
+      "acceptanceCriteria": [
+        "UserProfile type definition no longer includes morningTime, middayTime, or eveningTime fields",
+        "Backend functions do not accept or process time window parameters",
+        "Existing user data migration handles removal of deprecated time window fields gracefully"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify frontend/src/hooks/useInternetIdentity.ts or other immutable authentication hooks",
+    "Maintain single-actor architecture in backend with all logic in main.mo",
+    "Preserve existing onboarding flow functionality for remaining steps",
+    "Do not remove weekly review reminder functionality if it exists independently of time windows"
+  ],
+  "nonGoals": [
+    "Removing all reminder functionality (only time-specific reminders are being removed)",
+    "Changing the Reset Plan step content or structure",
+    "Modifying other plan configuration options beyond reminders"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

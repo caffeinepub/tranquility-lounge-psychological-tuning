@@ -1,0 +1,62 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-remove-the-time-windows-selection-step-step-4-from-the-onboarding-flow-updating-the-step-indicator-to-show-4-steps-instead-of-5-and-adjusting-step-navigation-accordingly",
+      "featureTitle": "Remove the time windows selection step (step 4) from the onboarding flow, updating the step indicator to show 4 steps instead of 5 and adjusting step navigation accordingly",
+      "files": [
+        "frontend/src/components/onboarding/TimeWindowsStep.tsx",
+        "frontend/src/pages/Onboarding.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-21"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-time-window-data-fields-from-the-onboarding-state-management-hook-eliminating-storage-and-submission-of-morning-midday-evening-time-preferences",
+      "featureTitle": "Remove time window data fields from the onboarding state management hook, eliminating storage and submission of morning/midday/evening time preferences",
+      "files": [
+        "frontend/src/hooks/useOnboarding.ts",
+        "frontend/src/pages/Onboarding.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-22"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-remindersconfig-component-from-the-plan-page-eliminating-the-reminders-configuration-card-entirely",
+      "featureTitle": "Remove the RemindersConfig component from the Plan page, eliminating the reminders configuration card entirely",
+      "files": [
+        "frontend/src/components/plan/RemindersConfig.tsx",
+        "frontend/src/pages/Plan.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-23"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Remove reminder time configuration from onboarding and plan settings",
+  "requirements": [
+    {
+      "id": "REQ-21",
+      "summary": "Remove the time windows selection step from the onboarding flow, updating the step indicator to show 4 steps instead of 5 and adjusting step navigation accordingly",
+      "acceptanceCriteria": [
+        "Onboarding flow progresses directly from Preferred Tools step to Reset Plan step",
+        "Step indicator displays 4 steps total instead of 5",
+        "Step numbering remains sequential (1: Goal Focus, 2: Escalation Patterns, 3: Preferred Tools, 4: Reset Plan)",
+        "TimeWindowsStep component is no longer rendered in the onboarding flow"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Onboarding.tsx",
+          "operation": "modify",
+          "description": "Remove TimeWindowsStep import and component rendering from the onboarding flow. Update step navigation logic to skip from step 3 (PreferredToolsStep) directly to step 4 (ResetPlanStep). Update the totalSteps constant from 5 to 4. Adjust the step progression logic in handleNext and handleBack to account for the removed step."
+        },
+        {
+          "path": "frontend/src/components/onboarding/StepIndicator.tsx",
+          "operation": "modify",
+          "description": "Update the StepIndicator component to display 4 steps instead of 5. Ensure step labels remain sequential and properly highlight the current step after TimeWindowsStep removal."
+        },
+        {
+          "path": "frontend/src/components/onboarding/TimeWindowsStep.tsx",
+          "operation": "delete",
+          "description": "Delete the TimeWindowsStep component file as it is no longer needed in the onboarding flow."
+        }
+      ]
+    },
+    {
+      "id": "REQ-22",
+      "summary": "Remove time window data fields from the onboarding state management hook, eliminating storage and submission of morning/midday/evening time preferences",
+      "acceptanceCriteria": [
+        "useOnboarding hook no longer tracks timeWindows state",
+        "Onboarding completion does not send time window data to backend",
+        "State object only contains goalFocus, escalationPatterns, preferredTools, and resetPlanSteps"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useOnboarding.ts",
+          "operation": "modify",
+          "description": "Remove timeWindows state field and all related logic from the useOnboarding hook. Eliminate the timeWindows property from the returned state object. Update the initial state to exclude morning/midday/evening time preferences. Ensure the hook only manages goalFocus, escalationPatterns, preferredTools, and resetPlanSteps."
+        },
+        {
+          "path": "frontend/src/pages/Onboarding.tsx",
+          "operation": "modify",
+          "description": "Update the onboarding completion logic to exclude timeWindows data when calling saveUserData. Ensure the UserProfile object submitted to the backend does not include any time window fields."
+        }
+      ]
+    },
+    {
+      "id": "REQ-23",
+      "summary": "Remove the RemindersConfig component from the Plan page, eliminating the reminders configuration card entirely",
+      "acceptanceCriteria": [
+        "RemindersConfig component is not rendered on the Plan page",
+        "Plan page displays only Reset Sequence, Tool Preferences, and Daily Routines sections",
+        "No UI elements related to reminder time configuration remain visible"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Plan.tsx",
+          "operation": "modify",
+          "description": "Remove the RemindersConfig import and component rendering from the Plan page. Update the layout to display only Reset Sequence, Tool Preferences, and Daily Routines sections. Adjust any grid or flex layouts to accommodate the removal of the reminders card."
+        },
+        {
+          "path": "frontend/src/components/plan/RemindersConfig.tsx",
+          "operation": "delete",
+          "description": "Delete the RemindersConfig component file as reminder time configuration is being removed from the application."
+        }
+      ]
+    }
+  ]
+}

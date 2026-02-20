@@ -1,0 +1,279 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Non-clinical self-regulation app (Tranquility Lounge Psychological Tuning) implementing Four-Level Regulation Model: Core (Interpret), Regulate (De-escalate), Act (Redesign), Shape Environment (Anchor). Provides psychoeducation, escalation prevention tools, personalized tuning routines, and functional wellbeing tracking. British English, GDPR compliant, non-pathologizing language.",
+  "architectural_notes": [
+    "Four-Level Regulation Model as primary navigation: Core (Interpret), Regulate (De-escalate), Act (Redesign), Shape Environment (Anchor)",
+    "User flow pattern: Notice → Stabilise → Choose → Reinforce",
+    "One-tap Reset access from every screen (ultra-simple, low cognitive load)",
+    "On-device storage for sensitive logs; minimize data collection",
+    "Offline-first architecture for key tools and saved routines",
+    "British English throughout; non-pathologizing language; no diagnosis or treatment claims",
+    "Brand attribution: © Valentina D. Diaconu on splash and settings",
+    "MVP scope: Onboarding, Dashboard, Reset, Tools (breathing/grounding/journal), Plan Builder, basic tracking"
+  ],
+  "known_issues": [
+    "User reports app blocks user continuation/navigation flow"
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-implement-onboarding-flow-with-five-sequential-steps-1-choose-goal-focus-from-options-including-stress-regulation-sleep-routine-productivity-emotional-steadiness-eating-regulation-confidence-2-select-main-escalation-patterns-from-racing-mind-irritability-shutdown-freeze-procrastination-avoidance-overthinking-sensory-overload-emotional-eating-difficulty-sleeping-3-choose-preferred-tools-from-breath-audio-guidance-journaling-prompts-habit-tracking-sensory-anchors-4-select-daily-time-windows-for-micro-tuning-5-create-personalized-reset-plan-shortcut-flow-must-complete-within-5-minutes-and-output-a-personalized-dashboard-configuration",
+      "title": "Implement onboarding flow with five sequential steps: (1) choose goal focus from options including stress regulation, sleep routine, productivity, emotional steadiness, eating regulation, confidence; (2) select main escalation patterns from racing mind, irritability, shutdown/freeze, procrastination/avoidance, overthinking, sensory overload, emotional eating, difficulty sleeping; (3) choose preferred tools from breath, audio guidance, journaling prompts, habit tracking, sensory anchors; (4) select daily time windows for micro-tuning; (5) create personalized Reset Plan shortcut. Flow must complete within 5 minutes and output a personalized dashboard configuration.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-home-dashboard-with-1-how-are-you-right-now-quick-check-using-0-10-intensity-scale-with-optional-text-label-2-suggested-next-step-based-on-current-state-3-optional-streak-display-without-guilt-based-nudges-4-quick-access-buttons-to-reset-my-plan-library-and-progress-sections",
+      "title": "Create Home Dashboard with: (1) 'How are you right now?' quick check using 0-10 intensity scale with optional text label; (2) 'Suggested Next Step' based on current state; (3) optional streak display without guilt-based nudges; (4) quick access buttons to Reset, My Plan, Library, and Progress sections.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-reset-module-with-one-tap-reset-now-button-accessible-from-every-screen-implement-guided-flow-1-name-it-10-sec-choose-from-predefined-list-2-regulate-60-180-sec-select-one-option-paced-breathing-grounding-sensory-anchor-brief-audio-3-core-30-sec-prompt-what-is-the-most-useful-interpretation-right-now-with-non-judgmental-tone-4-act-30-sec-choose-one-micro-action-text-pause-step-away-drink-water-brief-walk-set-a-boundary-line-5-anchor-optional-pick-environment-adjustment-light-sound-scent-posture-screen-reduction-6-close-re-rate-intensity-0-10-total-flow-duration-90-seconds-to-6-minutes",
+      "title": "Build Reset module with one-tap 'RESET NOW' button accessible from every screen. Implement guided flow: (1) Name it (10 sec) - choose from predefined list; (2) Regulate (60-180 sec) - select one option: paced breathing, grounding, sensory anchor, brief audio; (3) Core (30 sec) - prompt 'What is the most useful interpretation right now?' with non-judgmental tone; (4) Act (30 sec) - choose one micro-action: text, pause, step away, drink water, brief walk, set a boundary line; (5) Anchor (optional) - pick environment adjustment: light, sound, scent, posture, screen reduction; (6) Close - re-rate intensity 0-10. Total flow duration 90 seconds to 6 minutes.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-learn-library-psychoeducation-with-lessons-organized-by-four-level-regulation-model-1-core-interpret-thought-patterns-and-cognitive-reframing-defusion-and-flexibility-social-comparison-reset-2-regulate-de-escalate-emotion-regulation-model-mindfulness-attention-basics-state-awareness-presented-as-nervous-system-literacy-3-act-redesign-behavioural-activation-habit-loop-design-4-shape-environment-anchor-multisensory-effects-sensory-modulation-in-non-clinical-language-sleep-environment-optimisation-each-lesson-is-3-7-minutes-and-ends-with-one-practice-one-apply-today-micro-task-and-an-optional-journal-prompt",
+      "title": "Implement Learn library (psychoeducation) with lessons organized by Four-Level Regulation Model: (1) Core: Interpret - thought patterns and cognitive reframing, defusion and flexibility, social comparison reset; (2) Regulate: De-escalate - emotion regulation model, mindfulness/attention basics, state awareness presented as nervous system literacy; (3) Act: Redesign - behavioural activation, habit loop design; (4) Shape Environment: Anchor - multisensory effects, sensory modulation in non-clinical language, sleep environment optimisation. Each lesson is 3-7 minutes and ends with one practice, one 'apply today' micro-task, and an optional journal prompt.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-tools-library-with-four-categories-and-favourites-functionality-1-regulation-tools-paced-breathing-timer-grounding-checklist-short-guided-audio-2-5-10-minutes-attention-spotlight-exercise-2-core-tools-thought-reframing-worksheet-3-steps-filter-shield-prompt-what-is-useful-what-stays-out-values-clarifier-3-behaviour-tools-habit-loop-mapper-cue-routine-reward-action-ladder-graded-confidence-steps-behavioural-activation-planner-tiny-actions-4-environment-tools-sensory-anchor-builder-sound-scent-tactile-cue-environment-checklist-light-noise-clutter-screen",
+      "title": "Build Tools library with four categories and favourites functionality: (1) Regulation Tools - paced breathing timer, grounding checklist, short guided audio (2, 5, 10 minutes), attention spotlight exercise; (2) Core Tools - thought reframing worksheet (3 steps), filter shield prompt (what is useful / what stays out), values clarifier; (3) Behaviour Tools - habit loop mapper (cue-routine-reward), action ladder (graded confidence steps), behavioural activation planner (tiny actions); (4) Environment Tools - sensory anchor builder (sound + scent + tactile cue), environment checklist (light, noise, clutter, screen).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-personal-plan-builder-allowing-users-to-1-create-1-3-daily-routines-morning-midday-evening-2-build-personalized-reset-sequence-3-select-preferred-tools-and-configure-reminders-4-set-up-weekly-review-prompt-plans-must-be-editable-and-persist-across-sessions",
+      "title": "Create Personal Plan Builder allowing users to: (1) create 1-3 daily routines (morning, midday, evening); (2) build personalized Reset sequence; (3) select preferred tools and configure reminders; (4) set up weekly review prompt. Plans must be editable and persist across sessions.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-tracking-and-progress-system-for-functional-wellbeing-metrics-non-clinical-1-regulation-rating-0-10-before-after-resets-2-sleep-quality-1-5-scale-3-focus-readiness-1-5-scale-4-energy-1-5-scale-5-habit-completion-yes-no-6-most-helpful-tool-this-week-generate-weekly-insights-such-as-your-quickest-de-escalation-tool-is-paced-breathing-and-evening-light-reduction-correlates-with-better-sleep-ratings",
+      "title": "Implement tracking and progress system for functional wellbeing metrics (non-clinical): (1) regulation rating 0-10 before/after resets; (2) sleep quality 1-5 scale; (3) focus readiness 1-5 scale; (4) energy 1-5 scale; (5) habit completion yes/no; (6) most helpful tool this week. Generate weekly insights such as 'Your quickest de-escalation tool is paced breathing' and 'Evening light reduction correlates with better sleep ratings'.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-crisis-disclaimer-screen-on-first-launch-and-make-accessible-inside-settings-include-if-you-are-at-immediate-risk-emergency-guidance-and-signposting-provide-functionality-to-store-emergency-contacts-and-local-crisis-numbers-with-uk-defaults-as-optional-preset",
+      "title": "Display crisis disclaimer screen on first launch and make accessible inside Settings. Include 'If you are at immediate risk…' emergency guidance and signposting. Provide functionality to store emergency contacts and local crisis numbers with UK defaults as optional preset.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-gdpr-compliance-with-1-transparent-privacy-policy-displayed-during-onboarding-2-minimize-data-collection-using-on-device-storage-for-sensitive-logs-3-explicit-consent-checkbox-for-any-analytics-4-clear-export-account-data-functionality-5-clear-delete-account-functionality-with-confirmation",
+      "title": "Ensure GDPR compliance with: (1) transparent privacy policy displayed during onboarding; (2) minimize data collection using on-device storage for sensitive logs; (3) explicit consent checkbox for any analytics; (4) clear export account data functionality; (5) clear delete account functionality with confirmation.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-branding-throughout-app-1-display-app-name-exactly-as-tranquility-lounge-psychological-tuning-on-splash-screen-and-in-appropriate-headers-2-include-copyright-attribution-valentina-d-diaconu-on-splash-screen-and-in-settings-about-section-3-use-british-english-spelling-and-terminology-consistently-4-apply-calm-professional-non-pathologising-language-avoiding-diagnosis-mental-illness-or-treatment-terminology-5-use-supportive-language-support-optimise-regulate-reduce-escalation-risk-build-resilience",
+      "title": "Apply branding throughout app: (1) display app name exactly as 'Tranquility Lounge Psychological Tuning' on splash screen and in appropriate headers; (2) include copyright attribution '© Valentina D. Diaconu' on splash screen and in Settings/About section; (3) use British English spelling and terminology consistently; (4) apply calm, professional, non-pathologising language avoiding diagnosis, mental illness, or treatment terminology; (5) use supportive language: support, optimise, regulate, reduce escalation risk, build resilience.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-accessibility-features-1-adjustable-text-size-with-at-least-three-size-options-small-medium-large-2-high-contrast-mode-toggle-in-settings-3-audio-captions-for-all-audio-guidance-tools-4-ensure-offline-access-for-key-tools-breathing-timer-grounding-checklist-journal-prompts-and-saved-routines-without-internet-connection",
+      "title": "Implement accessibility features: (1) adjustable text size with at least three size options (small, medium, large); (2) high contrast mode toggle in Settings; (3) audio captions for all audio guidance tools; (4) ensure offline access for key tools (breathing timer, grounding checklist, journal prompts) and saved routines without internet connection.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-ui-with-low-cognitive-load-principles-for-high-stress-moments-1-ensure-one-tap-access-to-reset-button-from-every-screen-persistent-navigation-or-overlay-button-2-use-minimal-icons-for-navigation-only-avoiding-emojis-or-decorative-icons-in-text-heavy-pages-3-maintain-clear-visual-hierarchy-with-generous-whitespace-4-limit-choices-per-screen-to-reduce-decision-fatigue-5-use-clear-concise-labels-and-instructions",
+      "title": "Design UI with low cognitive load principles for high-stress moments: (1) ensure one-tap access to Reset button from every screen (persistent navigation or overlay button); (2) use minimal icons for navigation only, avoiding emojis or decorative icons in text-heavy pages; (3) maintain clear visual hierarchy with generous whitespace; (4) limit choices per screen to reduce decision fatigue; (5) use clear, concise labels and instructions.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-and-apply-a-cohesive-visual-theme-using-warm-calming-colors-avoiding-blue-and-purple-unless-contextually-necessary-clean-typography-suited-to-wellbeing-content-and-consistent-spacing-that-supports-readability-and-low-cognitive-load-the-visual-style-should-feel-professional-approachable-and-aligned-with-psychological-tuning-and-self-regulation-concepts",
+      "title": "Design and apply a cohesive visual theme using warm, calming colors (avoiding blue and purple unless contextually necessary), clean typography suited to wellbeing content, and consistent spacing that supports readability and low cognitive load. The visual style should feel professional, approachable, and aligned with psychological tuning and self-regulation concepts.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-identify-and-fix-any-navigation-blocking-issues-in-the-onboarding-flow-that-prevent-users-from-continuing-to-subsequent-steps-or-completing-the-onboarding-process",
+      "title": "Identify and fix any navigation blocking issues in the onboarding flow that prevent users from continuing to subsequent steps or completing the onboarding process",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-audit-and-fix-any-blocking-navigation-issues-in-the-reset-flow-that-prevent-users-from-advancing-through-the-6-step-guided-process-name-it-regulate-core-act-anchor-close",
+      "title": "Audit and fix any blocking navigation issues in the Reset flow that prevent users from advancing through the 6-step guided process (Name It, Regulate, Core, Act, Anchor, Close)",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-review-and-fix-any-disabled-or-non-functional-buttons-in-the-crisis-disclaimer-screen-that-may-prevent-users-from-acknowledging-and-proceeding-to-the-main-application",
+      "title": "Review and fix any disabled or non-functional buttons in the crisis disclaimer screen that may prevent users from acknowledging and proceeding to the main application",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-all-form-validation-logic-across-the-application-properly-enables-submit-continue-buttons-when-valid-data-is-entered-and-provides-clear-feedback-when-required-fields-are-missing",
+      "title": "Ensure all form validation logic across the application properly enables submit/continue buttons when valid data is entered, and provides clear feedback when required fields are missing",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-console-logging-to-track-navigation-flow-state-transitions-and-button-enable-disable-logic-to-facilitate-debugging-of-continuation-issues",
+      "title": "Add console logging to track navigation flow state transitions and button enable/disable logic to facilitate debugging of continuation issues",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-time-windows-selection-step-step-4-from-the-onboarding-flow-updating-the-step-indicator-to-show-4-steps-instead-of-5-and-adjusting-step-navigation-accordingly",
+      "title": "Remove the time windows selection step (step 4) from the onboarding flow, updating the step indicator to show 4 steps instead of 5 and adjusting step navigation accordingly",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-time-window-data-fields-from-the-onboarding-state-management-hook-eliminating-storage-and-submission-of-morning-midday-evening-time-preferences",
+      "title": "Remove time window data fields from the onboarding state management hook, eliminating storage and submission of morning/midday/evening time preferences",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-remindersconfig-component-from-the-plan-page-eliminating-the-reminders-configuration-card-entirely",
+      "title": "Remove the RemindersConfig component from the Plan page, eliminating the reminders configuration card entirely",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Onboarding flow: goal focus, escalation patterns, preferred tools, time windows, Reset Plan creation (5 min)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Home Dashboard: intensity check (0-10), suggested next step, quick access to Reset/My Plan/Library/Progress",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Reset module: one-tap escalation prevention flow (Name→Regulate→Core→Act→Anchor→re-rate, 90s-6min)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Learn library: psychoeducation lessons (3-7min) mapped to Four-Level Model with practice, micro-task, journal prompt",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Tools library: regulation (breathing, grounding, audio), core (reframing, filter shield), behaviour (habit mapper), environment (sensory anchor)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Personal Plan Builder: create 1-3 daily routines, personalized Reset sequence, preferred tools, reminders, weekly review",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Tracking & Progress: functional wellbeing metrics (regulation rating, sleep, focus, energy, habit completion) with weekly insights",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Crisis disclaimer screen (first launch + Settings) with emergency guidance, signposting, emergency contact storage (UK defaults)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Privacy & GDPR compliance: on-device storage, explicit consent for analytics, export/delete account functionality",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Accessibility: adjustable text size, high contrast option, audio captions, offline access for key tools",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Implement backend data models to support: (1) user profiles with onboarding selections (goals, escalation patterns, preferred tools, time windows); (2) personalized plans (daily routines, Reset sequences, tool preferences, reminders); (3) tracking data (regulation ratings, sleep quality, focus, energy, habit completions); (4) emergency contacts storage; (5) user preferences (text size, high contrast, analytics consent). Store sensitive data using privacy-first approach preferring local storage.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Deploy the Tranquility Lounge Psychological Tuning application to production environment on the Internet Computer mainnet, ensuring all canister configurations are set for live deployment with appropriate cycle management and production domain settings",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-28",
+      "summary": "Remove timeWindows fields from the backend UserProfile type and eliminate all storage, retrieval, and update logic for reminder time preferences",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Tranquility Lounge Psychological Tuning",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

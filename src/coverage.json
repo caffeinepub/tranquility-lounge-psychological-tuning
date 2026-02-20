@@ -1,0 +1,83 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-20T12:09:40.125Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 4,
+    "implemented": 3,
+    "items": [
+      {
+        "id": "REQ-21",
+        "summary": "Remove the time windows selection step (step 4) from the onboarding flow, updating the step indicator to show 4 steps instead of 5 and adjusting step navigation accordingly",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Onboarding.tsx",
+          "frontend/src/components/onboarding/StepIndicator.tsx",
+          "frontend/src/components/onboarding/TimeWindowsStep.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Onboarding.tsx",
+          "frontend/src/components/onboarding/TimeWindowsStep.tsx"
+        ]
+      },
+      {
+        "id": "REQ-22",
+        "summary": "Remove time window data fields from the onboarding state management hook, eliminating storage and submission of morning/midday/evening time preferences",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useOnboarding.ts",
+          "frontend/src/pages/Onboarding.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useOnboarding.ts",
+          "frontend/src/pages/Onboarding.tsx"
+        ]
+      },
+      {
+        "id": "REQ-23",
+        "summary": "Remove the RemindersConfig component from the Plan page, eliminating the reminders configuration card entirely",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Plan.tsx",
+          "frontend/src/components/plan/RemindersConfig.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Plan.tsx",
+          "frontend/src/components/plan/RemindersConfig.tsx"
+        ]
+      },
+      {
+        "id": "REQ-24",
+        "summary": "Remove timeWindows fields from the backend UserProfile type and eliminate all storage, retrieval, and update logic for reminder time preferences",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/onboarding/TimeWindowsStep.tsx",
+    "frontend/src/components/plan/RemindersConfig.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useOnboarding.ts",
+    "frontend/src/pages/Onboarding.tsx",
+    "frontend/src/pages/Plan.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
